@@ -26,9 +26,21 @@ if response.status_code == 200:
         # Modify content and re-encode
         modifiedContent = content.replace("Andrew", "Tomasz")
         encodedContent = base64.b64encode(modifiedContent.encode("utf-8")).decode("utf-8")
-        print(modifiedContent)
-        print(encodedContent)
+        
+        # Prepare the update request
+        updateData = {
+            "message": "Replaced 'Andrew' with 'Tomasz'",
+            "content": encodedContent,
+            "sha": sha,
+        }
 
+        # Commit the changes
+        updateResponse = requests.put(URL, auth=('token', apiKey), json=updateData, timeout=TIMEOUT)
+
+        if updateResponse.status_code in [200, 201]:
+            print("File updated successfully!")
+        else:
+            print(f"Error updating file: {updateResponse.status_code}, {updateResponse.json()}")
 
     else:
         print("Error: Missing 'content' or 'sha' in the response")
