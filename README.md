@@ -114,15 +114,15 @@ If you don't have VS Code installed, you can download it from [here](https://cod
 
    If you're working with the GitHub API, follow these steps to create a **Personal Access Token**:
 
-    1. Log in to GitHub.
-    2. Go to **Settings** > **Developer settings**.
-    3. Click **Personal access tokens** > **Fine-grained tokens**.
-    4. Give it a name and (optionally) set an expiration date.
-    5. Choose the repository (or all repos) you want access for.
-    6. Under **Repository permissions**, grant the necessary access (e.g., `Contents: Read and write`).
-    7. Click **Generate token**.
-    8. Copy and store this token securely—**you won’t be able to see it again**.
-    9. Paste it into your `config.py` as shown above.
+     * Log in to GitHub.
+     * Go to **Settings** > **Developer settings**.
+     * Click **Personal access tokens** > **Fine-grained tokens**.
+     * Give it a name and (optionally) set an expiration date.
+     * Choose the repository (or all repos) you want access for.
+     * Under **Repository permissions**, grant the necessary access (e.g., `Contents: Read and write`).
+     * Click **Generate token**.
+     * Copy and store this token securely - **you won’t be able to see it again**.
+     * Paste it into your `config.py` as shown above.
 
 7. **Run the script** using:
    ```bash
