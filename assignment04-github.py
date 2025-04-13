@@ -1,6 +1,5 @@
-"""
 # This script updates a file in a GitHub repository by replacing 'Andrew' with 'Tomasz'.
-"""
+
 # Author: Tomasz Uszynski
 
 import base64
